@@ -1,0 +1,21 @@
+{
+  "family": "oliveyoung-task-def",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::905418072642:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "oliveyoung-container",
+      "image": "905418072642.dkr.ecr.ap-northeast-2.amazonaws.com/oliveyoung-app:__IMAGE_TAG__",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}

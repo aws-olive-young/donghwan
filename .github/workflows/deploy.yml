@@ -37,6 +37,11 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
 
+      #task 정의에 사용할 태그
+      - name: Replace image tag with SHA
+        run: sed -i "s|__IMAGE_TAG__|${{ github.sha }}|g" .aws/task-definition.json
+
+
       #AWS 인증 설정
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v2
