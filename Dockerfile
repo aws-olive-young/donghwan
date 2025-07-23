@@ -1,7 +1,7 @@
 # Dockerfile
 
 #기반 이미지 지정
-FROM openjdk:17-jdk-alpine
+FROM openjdk:21-slim
 #인자 설정
 ARG JAR_FILE=build/libs/*.jar
 #컨테이너로 복사
