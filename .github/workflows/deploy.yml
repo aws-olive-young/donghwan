@@ -70,4 +70,4 @@ jobs:
           task-definition: ${{ env.ECS_TASK_DEFINITION }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
-          wait-for-service-stability: true  #ECS 서버가 안정화될 때까지 대기
+          wait-for-service-stability: true  #ECS서버가 안정화될 때까지 대기
